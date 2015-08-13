@@ -1,5 +1,8 @@
 # MyApp_810758
 
+Exploring how MIX_ENV relates to deploying on Heroku.
+How do we deploy our project as 'staging' vs. 'prod'?
+
 To start your Phoenix app:
 
   1. Install dependencies with `mix deps.get`
