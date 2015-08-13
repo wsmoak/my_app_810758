@@ -55,7 +55,11 @@ config :logger, level: :info
 #
 #     config :my_app_810758, MyApp_810758.Endpoint, server: true
 #
+config :my_app_810758, MyApp_810758.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE")
 
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-import_config "prod.secret.exs"
+# Configure your database
+config :my_app_810758, MyApp_810758.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  url: System.get_env("DATABASE_URL"),
+  size: 20 # The amount of database connections in the pool
